@@ -1,18 +1,36 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <aside-chat></aside-chat>
+    <chat-list></chat-list>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import AsideChat from '@/common/components/AsideChat.vue'
+import ChatList from '@/common/components/ChatList.vue'
 export default {
-  name: 'Home',
   components: {
-    HelloWorld
-  }
+    AsideChat,
+    ChatList,
+  },
 }
 </script>
+<style lang="scss" scoped>
+.home {
+  display: flex;
+  width: 50vw;
+  height: 70vh;
+  box-shadow: 0px 0px 16px #E0DFDF;
+  margin: auto;
+}
+
+.chat-aside {
+  padding: 10px;
+  background: #2e2e2e;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.chat-list {
+}
+</style>
